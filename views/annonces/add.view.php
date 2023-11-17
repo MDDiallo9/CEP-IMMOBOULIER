@@ -8,10 +8,14 @@
     <div>
         <label for="type">Type :</label>
         <select name="type" id="type">
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
+            <option value="">Selectionnez le type de votre bien :</option>
+            <option value="0">Location</option>
+            <option value="1">Achat</option>
         </select>
+    </div>
+    <div>
+        <label for="prix">Entrez un prix :</label>
+        <input type="number" name="prix">
     </div>
     <div>
         <label for="description">Description :</label>
