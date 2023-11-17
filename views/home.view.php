@@ -15,6 +15,13 @@
         <p class="surface"><?= $annonce["surface"] ?>m² , <?= $annonce["pieces"] ?> pièces </p>
         <p><strong><?= $annonce["prix"] ?> €</strong></p>
         <p class="energie">Energie : <?= $annonce["energie"] ?> Pollution : <?= $annonce["pollution"] ?></p>
+        <div class="btn-container">
+            <a class="btn" href="/read?id=<?= $annonce["id"] ?>">Détails...</a>
+            <a class="btn" href="/update?id=<?= $annonce["id"] ?>">Modifier</a>
+        </div>
+        <?php if($annonce["modifie_le"]){?>
+            Dernière modification le <?= $annonce["modifie_le"] ?>
+            <?php }?>
     </article>
 <?php  }; ?>
 
