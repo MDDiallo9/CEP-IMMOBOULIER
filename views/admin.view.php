@@ -15,11 +15,11 @@
         <tr>
             <td><div class="mini"><img src="upload/<?= $annonce["image"] ?>" alt=""></div></td>
             <td><?= $annonce["titre"] ?></td>
-            <td><?= $annonce["description"] ?></td>
+            <td><?= substr($annonce["description"],0,30) . "(...)" ?></td>
             <td><?= $annonce["type"] == 0 ? "Location" : "Achat" ?> - <?= $annonce["prix"] ?>€</td>
-            <td><?= $annonce["surface"] ?></td>
+            <td><?= $annonce["surface"] ?> m²</td>
             <td><span class="energy"><?= $annonce["pollution"] ?></span><span><?= $annonce["energie"] ?></span></td>
-            <td>Crée le : <?= $annonce["cree_le"] ?> <?= $annonce["modifie_le"] ? "Dernière modification : $annonce[modifie_le]" : "" ?></td>
+            <td>Crée le : <?= substr($annonce["cree_le"],0,10) ?><br><?= $annonce["modifie_le"] ? "Dernière modification : " . substr($annonce["modifie_le"],0,10) : "" ?></td>
             <td>
             <a class="btn" href="/read?id=<?= $annonce["id"] ?>">Détails</a>
             <a class="btn" href="/update?id=<?= $annonce["id"] ?>">Modifier</a>
