@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Raleway:wght@500&display=swap");
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-family: "Lato";
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+img,
+input {
+  width: 100%;
+  vertical-align: bottom;
+}
+ul {
+  list-style: none;
+}
+nav {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  gap: 2rem;
+}
+input[type="submit"],
+.btn {
+  cursor: pointer;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  margin-right: 6px;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  background-color: blue;
+}
+.mini{
+    width: 150px;
+}
+td{
+    padding: 0 .5rem;
+}
