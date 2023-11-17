@@ -11,10 +11,10 @@
             <?php } else { ?>
                 <p class="type">Achat</p>
             <?php } ?>
-            <div><img src="upload/<?= $annonce["image"] ?>" alt=""></div>
+            <div class="big" style='background-image: url("upload/<?= $annonce["image"] ?>");'></div>
             <p><?= $annonce["description"] ?></p>
             <p><?= $annonce["surface"] ?>m² , <?= $annonce["pieces"] ?> pièces </p>
-            <p><strong><?= $annonce["prix"] ?> €</strong></p>
+            <p><strong><?= number_format($annonce["prix"], 2, ',', ' ') ?> €</strong></p>
             <p class="energie">Energie : <?= $annonce["energie"] ?> Pollution : <?= $annonce["pollution"] ?></p>
             <?php if($annonce["modifie_le"]){?>
                 Dernière modification le <?= $annonce["modifie_le"] ?>

@@ -5,7 +5,7 @@
     <?php foreach ($annonces as $annonce) {
     ?>
         <article class="photo">
-            <div class="big"><img src="upload/<?= $annonce["image"] ?>" alt=""></div>
+            <div class="big" style='background-image: url("upload/<?= $annonce["image"] ?>");'></div>
             <div class="description">
                 <h3><?= $annonce["titre"] ?></h3>
                 <div>

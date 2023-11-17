@@ -11,7 +11,7 @@
             <?php } else { ?>
                 <p class="type">Achat</p>
             <?php } ?>
-            <div><img src="upload/<?= $annonce["image"] ?>" alt=""></div>
+            <div class="big" style='background-image: url("upload/<?= $annonce["image"] ?>");'></div>
             <p><?= $annonce["description"] ?></p>
             <p><?= $annonce["surface"] ?>m² , <?= $annonce["pieces"] ?> pièces </p>
             <p><strong><?= $annonce["prix"] ?> €</strong></p>
