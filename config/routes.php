@@ -5,4 +5,5 @@ $routes = [
     '/prix' => 'controllers/prix.php',
     '/add' => 'controllers/annonces/add.php',
     '/read' => 'controllers/annonces/read.php',
+    '/update' => 'controllers/annonces/update.php',
 ];
