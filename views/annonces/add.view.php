@@ -3,11 +3,11 @@
 <form action="" method="post" enctype="multipart/form-data">
     <div>
         <label for="titre">Titre :</label>
-        <input type="text" id="titre" name="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : '' ?>">
+        <input required type="text" id="titre" name="titre" value="<?= isset($_POST['titre']) ? $_POST['titre'] : '' ?>">
     </div>
     <div>
         <label for="type">Type :</label>
-        <select name="type" id="type">
+        <select required name="type" id="type">
             <option value="">Selectionnez le type de votre bien :</option>
             <option value="0">Location</option>
             <option value="1">Achat</option>
@@ -15,7 +15,7 @@
     </div>
     <div>
         <label for="prix">Entrez un prix :</label>
-        <input type="number" name="prix">
+        <input required type="number" name="prix">
     </div>
     <div>
         <label for="description">Description :</label>
