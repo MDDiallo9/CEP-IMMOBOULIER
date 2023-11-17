@@ -1,5 +1,5 @@
 <?php require("partials/header.php"); ?>
-
+<a href="/add">Ajouter une annonce</a>
 
 <?php foreach ($annonces as $annonce) {
 ?>
