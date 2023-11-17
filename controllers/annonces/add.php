@@ -1,8 +1,7 @@
 <?php
 require ("./models/Database.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    debug($_POST);
-    debug($_FILES);
+    
     $errors = [];
 
     $titre = trim(filter_var($_POST["titre"],FILTER_SANITIZE_FULL_SPECIAL_CHARS));
@@ -11,16 +10,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $prix = trim(filter_var($_POST["prix"],FILTER_SANITIZE_NUMBER_INT));
     $surface = trim(filter_var($_POST["surface"],FILTER_SANITIZE_NUMBER_INT));
     $pieces = trim(filter_var($_POST["pieces"],FILTER_SANITIZE_NUMBER_INT));
-    $pollution = trim(filter_var($_POST["pollution"],FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-    $energie = trim(filter_var($_POST["energie"],FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    @$pollution = trim(filter_var($_POST["pollution"],FILTER_SANITIZE_FULL_SPECIAL_CHARS)); 
+    @$energie = trim(filter_var($_POST["energie"],FILTER_SANITIZE_FULL_SPECIAL_CHARS));
     $image = $_FILES["image"]["name"];
 
-
+    if(strlen($titre) > 50){
+        $errors[] = "Le titre de votre annonce est trop long";
+    }
     if ($type === ""){
         $errors[] = "Veuillez entrer un type pour votre bien";
     }
     if ($pieces === ""){
         $errors[] = "Veuillez entrer le nombre de pièces du bien";
+    }
+    if ($prix < 0 || !is_numeric($prix)){
+        $errors[] = "Veuillez entrer un prix valide";
+    }
+    if(isset($errors)){
+        foreach($errors as $error){
+            echo "<p style=\"color: red;\">*",htmlspecialchars($error),"</p>\n\n";
+        }
     }
 
     if (empty($errors)){
@@ -42,12 +51,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $uploadfile = $uploaddir . basename($_FILES['image']['name']);
         move_uploaded_file($_FILES['image']['tmp_name'], $uploadfile);
 
+        $lastInsertId = $db->lastInsertId();
         if($lastInsertId){
             header("Location: /");
         }
 
     }
-
+    
 
 }
+
 require("./views/annonces/add.view.php");
