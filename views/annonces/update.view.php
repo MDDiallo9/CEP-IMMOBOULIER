@@ -9,8 +9,16 @@
         <label for="type">Type :</label>
         <select name="type" id="type">
             <option value="">Selectionnez le type de votre bien :</option>
-            <option value="0">Location</option>
-            <option value="1">Achat</option>
+            <!-- <option value="0">Location</option>
+            <option value="1">Achat</option> -->
+            <?php
+            for ($i = 0; $i < 2; $i++) { ?>
+                <?php if ($i == $annonceUpdate["type"]) { ?>
+                    <option value="<?= $i ?>" selected> <?= $annonceUpdate["type"] == 0 ? "Location" : "Achat" ?></option>
+                <?php } else { ?>
+                    <option value="<?= $i ?>"><?= $annonceUpdate["type"] == 0 ? "Location" : "Achat" ?></option>
+                <?php } ?>
+            <?php } ?>
         </select>
     </div>
     <div>

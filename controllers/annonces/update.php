@@ -31,8 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $errors[] = "Veuillez entrer le nombre de pièces du bien";
     }
 
+    $date = date('Y-m-d H:i:s');
+
     if (empty($errors)){
-        $nouvelleAnnonce = $db->prepare("UPDATE annonce SET titre = :titre,type = :type,description = :description,prix = :prix,surface = :surface,pieces = :pieces,pollution = :pollution,energie = :energie,image = :image WHERE id = :id");
+        $nouvelleAnnonce = $db->prepare("UPDATE annonce SET titre = :titre,type = :type,description = :description,prix = :prix,surface = :surface,pieces = :pieces,pollution = :pollution,energie = :energie,image = :image,modifie_le = :modifie_le WHERE id = :id");
 
         $nouvelleAnnonce->bindValue(":titre",$titre,PDO::PARAM_STR);
         $nouvelleAnnonce->bindValue(":type",$type,PDO::PARAM_INT);
@@ -44,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
         $nouvelleAnnonce->bindValue(":energie",$energie,PDO::PARAM_STR);
         $nouvelleAnnonce->bindValue(":image",$image,PDO::PARAM_STR);
         $nouvelleAnnonce->bindValue(":id",$id,PDO::PARAM_INT);
+        $nouvelleAnnonce->bindValue(":modifie_le",$date,PDO::PARAM_STR);
+
 
         
 
@@ -60,5 +64,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     }
 }
-
+debug($annonceUpdate);
 require("./views/annonces/update.view.php");
