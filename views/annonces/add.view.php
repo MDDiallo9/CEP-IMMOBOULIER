@@ -42,51 +42,55 @@
     </div>
     <div>
         <label for="pollution">Pollution :</label>
-        <label for="A">A
-        <input type="radio" name="pollution" id="A" value="A">
-        </label>
-        <label for="B">B
-        <input type="radio" name="pollution" id="B" value="B">
-        </label>
-        <label for="C">C
-        <input type="radio" name="pollution" id="C" value="C">
-        </label>
-        <label for="D">D
-        <input type="radio" name="pollution" id="D" value="D">
-        </label>
-        <label for="E">E
-        <input type="radio" name="pollution" id="E" value="E">
-        </label>
-        <label for="F">F
-        <input type="radio" name="pollution" id="F" value="F">
-        </label>
-        <label for="G">G
-        <input type="radio" name="pollution" id="G" value="G">
-        </label>   
+        <div class="radio-container flex">
+            <label for="A">A
+            <input type="radio" name="pollution" id="A" value="A">
+            </label>
+            <label for="B">B
+            <input type="radio" name="pollution" id="B" value="B">
+            </label>
+            <label for="C">C
+            <input type="radio" name="pollution" id="C" value="C">
+            </label>
+            <label for="D">D
+            <input type="radio" name="pollution" id="D" value="D">
+            </label>
+            <label for="E">E
+            <input type="radio" name="pollution" id="E" value="E">
+            </label>
+            <label for="F">F
+            <input type="radio" name="pollution" id="F" value="F">
+            </label>
+            <label for="G">G
+            <input type="radio" name="pollution" id="G" value="G">
+            </label>
+        </div>   
     </div>
     <div>
         <label for="energie">Energie :</label>
-        <label for="A">A
-        <input type="radio" name="energie" id="A" value="A">
-        </label>
-        <label for="B">B
-        <input type="radio" name="energie" id="B" value="B">
-        </label>
-        <label for="C">C
-        <input type="radio" name="energie" id="C" value="C">
-        </label>
-        <label for="D">D
-        <input type="radio" name="energie" id="D" value="D">
-        </label>
-        <label for="E">E
-        <input type="radio" name="energie" id="E" value="E">
-        </label>
-        <label for="F">F
-        <input type="radio" name="energie" id="F" value="F">
-        </label>
-        <label for="G">G
-        <input type="radio" name="energie" id="G" value="G">
-        </label>   
+        <div class="radio-container flex">
+            <label for="A">A
+            <input type="radio" name="energie" id="A" value="A">
+            </label>
+            <label for="B">B
+            <input type="radio" name="energie" id="B" value="B">
+            </label>
+            <label for="C">C
+            <input type="radio" name="energie" id="C" value="C">
+            </label>
+            <label for="D">D
+            <input type="radio" name="energie" id="D" value="D">
+            </label>
+            <label for="E">E
+            <input type="radio" name="energie" id="E" value="E">
+            </label>
+            <label for="F">F
+            <input type="radio" name="energie" id="F" value="F">
+            </label>
+            <label for="G">G
+            <input type="radio" name="energie" id="G" value="G">
+            </label>
+        </div>   
     </div>
     <div>
         <input type="submit" value="Ajouter">

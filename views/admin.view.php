@@ -1,5 +1,7 @@
 <?php require("partials/header.php"); ?>
-
+<div style="margin: 1rem;display:flex;justify-content:end">
+    <a href="/add" class="btn">Ajouter une annonce</a>
+</div>
 <table>
     <tr>
         <th>Image</th>
