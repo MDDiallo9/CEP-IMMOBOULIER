@@ -66,6 +66,9 @@ input[type="submit"],
 }
 .big {
   width: 100%;
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 td {
   padding: 0 1rem;
@@ -137,4 +140,7 @@ form div{
 }
 .half div{
     width: 800px;
+}
+strong{
+    font-size: 2rem;
 }
