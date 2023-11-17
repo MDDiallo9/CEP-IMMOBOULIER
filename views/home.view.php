@@ -10,7 +10,7 @@
         <?php } else { ?>
             <p class="type">Achat</p>
         <?php } ?>
-        <div><img src="" alt=""></div>
+        <div><img src="upload/<?= $annonce["image"] ?>" alt=""></div>
         <p><?= $annonce["description"] ?></p>
         <p class="surface"><?= $annonce["surface"] ?>m² , <?= $annonce["pieces"] ?> pièces </p>
         <p><strong><?= $annonce["prix"] ?> €</strong></p>
